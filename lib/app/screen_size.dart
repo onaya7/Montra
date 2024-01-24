@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class ScreenSize {
-  static double screenWidth(BuildContext context) {
+  ScreenSize._();
+  static double maxWidth(BuildContext context) {
     return MediaQuery.of(context).size.width;
   }
 
-  static double screenHeight(BuildContext context) {
+  static double maxHeight(BuildContext context) {
     return MediaQuery.of(context).size.height;
   }
 }

@@ -12,8 +12,10 @@ import 'package:flutter/material.dart';
 
 class ColorConstants {
   ColorConstants._();
+
   //App Colors'
-  static const Color primaryColor = Color.fromRGBO(127, 61, 255, 1);
+  static const Color violetColor100 = Color.fromRGBO(127, 61, 255, 1);
+  static const Color violetColor50 = Color.fromRGBO(238, 229, 255, 1);
 
   //Light Theme Colors
   static const Color lightColor20 = Color.fromRGBO(145, 145, 159, 1);

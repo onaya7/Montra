@@ -1,11 +1,5 @@
-import 'package:montra/app/screen_size.dart';
-
 class SizeConstants {
   SizeConstants._();
-
-  // Device max width and height
-  static const deviceMaxWidth = ScreenSize.screenWidth;
-  static const deviceMaxHeight = ScreenSize.screenHeight;
 
   // Onboarding screen constants
   static const double onboardingImageWidth = 200.0;

@@ -1,13 +1,12 @@
 class TextConstants {
   TextConstants._();
-  
-  // Onboarding Constants
-  static const String onboardingTitle = 'Welcome to Montra';
-  static const String onboardingSubtitle = 'Get started with Montra and explore new opportunities';
-
   // Splash Constants
-  static const String splashTitle = 'Montra';
-  static const String splashSubtitle = 'Discover, Connect, and Grow';
+  static const String splashTitle = 'montra';
+
+  // Onboarding Constants
+  static const String onboardingTitle = 'Gain total control of your money';
+  static const String onboardingSubtitle =
+      'Become your own money manager and make every cent count';
 
   // Auth Constants
   static const String authTitle = 'Montra Login';
