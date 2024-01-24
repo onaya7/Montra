@@ -28,7 +28,6 @@ class ImagePathConstants {
   static const String profile = 'assets/images/profile.svg';
 
   // General icons
-  static const String arrowRight = 'assets/images/arrow_right.svg';
   static const String arrowLeft = 'assets/images/arrow_left.svg';
   static const String edit = 'assets/images/edit.svg';
 }
