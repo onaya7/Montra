@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:montra/app/routes.dart';
 import 'package:montra/app/themes.dart';
+import 'package:montra/core/constants/color_constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +14,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: ColorConstants.lightColor100, // Set status bar color
+      statusBarIconBrightness: Brightness.dark, // Set status bar icon color
+      systemNavigationBarColor:
+          ColorConstants.lightColor100, // Set navigation bar color
+      systemNavigationBarIconBrightness: Brightness.dark,
+    ));
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: AppThemes.lightTheme,
