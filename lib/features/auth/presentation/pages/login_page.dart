@@ -19,7 +19,6 @@ class _LoginPageState extends State<LoginPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final bool _isChecked = false;
 
   late FocusNode _emailFocusNode;
   late FocusNode _passwordFocusNode;
@@ -40,7 +39,9 @@ class _LoginPageState extends State<LoginPage> {
     super.dispose();
   }
 
-  void onPressed() {}
+  void onPressed() {
+    debugPrint(' button pressed');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -71,44 +72,54 @@ class _LoginPageState extends State<LoginPage> {
               child: Form(
                 key: _formKey,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                  CustomFormField(
-                      controller: _emailController,
-                      currentFocus: _emailFocusNode,
-                      nextFocus: _passwordFocusNode,
-                      label: 'Email',
-                      obscureText: false,
-                      action: TextInputAction.next,
-                      validator: (value) => Validation.validateEmail(value)),
-                  const SizedBox(height: 24),
-                  CustomFormField(
-                      controller: _passwordController,
-                      currentFocus: _passwordFocusNode,
-                      label: 'Password',
-                      obscureText: true,
-                      action: TextInputAction.done,
-                      isPasswordField: true,
-                      validator: (value) => Validation.validateEmail(value)),
-                  const SizedBox(
-                    height: 27,
-                  ),
-                  CustomButton(
-                      text: TextConstants.authLogin,
-                      textColor: ColorConstants.lightColor80,
-                      backgroundColor: ColorConstants.violetColor100,
-                      onPressed: onPressed),
-                  const SizedBox(
-                    height: 12,
-                  ),
-                  const SizedBox(
-                    height: 19,
-                  ),
-                  CustomAccount(
-                      text: TextConstants.authtext8,
-                      navigateTo: TextConstants.authSignUp,
-                      onTap: () => Navigator.pushNamed(context, '/signup')),
-                ]),
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      CustomFormField(
+                          controller: _emailController,
+                          currentFocus: _emailFocusNode,
+                          nextFocus: _passwordFocusNode,
+                          label: 'Email',
+                          obscureText: false,
+                          action: TextInputAction.next,
+                          validator: (value) =>
+                              Validation.validateEmail(value)),
+                      const SizedBox(height: 24),
+                      CustomFormField(
+                          controller: _passwordController,
+                          currentFocus: _passwordFocusNode,
+                          label: 'Password',
+                          obscureText: true,
+                          action: TextInputAction.done,
+                          isPasswordField: true,
+                          validator: (value) =>
+                              Validation.validateEmail(value)),
+                      const SizedBox(
+                        height: 40,
+                      ),
+                      CustomButton(
+                          text: TextConstants.authLogin,
+                          textColor: ColorConstants.lightColor80,
+                          backgroundColor: ColorConstants.violetColor100,
+                          onPressed: onPressed),
+                      const SizedBox(
+                        height: 33,
+                      ),
+                      GestureDetector(
+                        onTap: onPressed,
+                        child: const Text(TextConstants.authtext6,
+                            style: TextStyle(
+                                color: ColorConstants.violetColor100,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600)),
+                      ),
+                      const SizedBox(
+                        height: 38,
+                      ),
+                      CustomAccount(
+                          text: TextConstants.authtext8,
+                          navigateTo: TextConstants.authSignUp,
+                          onTap: () => Navigator.pushNamed(context, '/signup')),
+                    ]),
               )),
         ));
   }
