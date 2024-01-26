@@ -7,7 +7,9 @@ import 'package:montra/core/utils/validations.dart';
 import 'package:montra/features/auth/presentation/widgets/custom_account.dart';
 import 'package:montra/features/auth/presentation/widgets/custom_auth_button.dart';
 import 'package:montra/features/auth/presentation/widgets/custom_button.dart';
+import 'package:montra/features/auth/presentation/widgets/custom_checkbox.dart';
 import 'package:montra/features/auth/presentation/widgets/custom_form_field.dart';
+import 'package:montra/features/auth/presentation/widgets/custom_textspan.dart';
 import 'package:montra/features/auth/provider/auth_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -23,7 +25,6 @@ class _SignupPageState extends State<SignupPage> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  bool _isChecked = false;
 
   late FocusNode _nameFocusNode;
   late FocusNode _emailFocusNode;
@@ -46,12 +47,6 @@ class _SignupPageState extends State<SignupPage> {
     _emailFocusNode.dispose();
     _passwordFocusNode.dispose();
     super.dispose();
-  }
-
-  void checkbox(bool? value) {
-    setState(() {
-      _isChecked = !_isChecked;
-    });
   }
 
   void onPressed() {}
@@ -126,47 +121,16 @@ class _SignupPageState extends State<SignupPage> {
                           ),
                           Row(
                             children: <Widget>[
-                              SizedBox(
-                                  height: 24,
-                                  width: 24,
-                                  child: Checkbox(
-                                    value: value.isChecked,
-                                    onChanged: value.checkbox,
-                                    activeColor: ColorConstants.violetColor100,
-                                    checkColor: ColorConstants.lightColor100,
-                                    side: const BorderSide(
-                                        width: 1.5,
-                                        color: ColorConstants.violetColor100),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(4),
-                                    ),
-                                  )),
+                              CustomCheckBox(
+                                  value: value.isChecked,
+                                  onChanged: value.checkbox),
                               const SizedBox(
                                 width: 10,
                               ),
-                              const SizedBox(
-                                width: 291,
-                                child: Text.rich(
-                                  TextSpan(children: [
-                                    TextSpan(
-                                      text: TextConstants.authtext1,
-                                      style: TextStyle(
-                                        color: ColorConstants.darkColor100,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                    TextSpan(
-                                      text: TextConstants.authtext2,
-                                      style: TextStyle(
-                                        color: ColorConstants.violetColor100,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ]),
-                                ),
-                              ),
+                              const CustomTextSpan(
+                                text1: TextConstants.authtext1,
+                                text2: TextConstants.authtext2,
+                              )
                             ],
                           ),
                           const SizedBox(

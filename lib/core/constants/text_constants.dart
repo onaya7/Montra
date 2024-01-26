@@ -30,4 +30,12 @@ class TextConstants {
   // login text
   static const String authtext6 = 'Forgot Password?';
   static const String authtext8 = 'Don\'t have an account yet? ';
+
+  // Profile Constants
+  static const String username = 'Username';
+  static const String name = 'Iriana Saliha';
+  static const String account = 'Account';
+  static const String setting = 'Setting';
+  static const String exportdata = 'Export Data';
+  static const String logout = 'Logout';
 }
