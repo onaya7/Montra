@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:montra/app/screen_size.dart';
-import 'package:montra/components/custom_button.dart';
+import 'package:montra/features/auth/presentation/widgets/custom_button.dart';
 import 'package:montra/core/constants/color_constants.dart';
 import 'package:montra/core/constants/image_path_constants.dart';
 import 'package:montra/core/constants/text_constants.dart';
-import 'package:montra/features/onboarding/presentation/widgets/custom_widget.dart';
+import 'package:montra/features/onboarding/presentation/widgets/onboarding_pageview.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingPage extends StatefulWidget {
@@ -73,21 +73,27 @@ class _OnboardingPageState extends State<OnboardingPage> {
               ),
 
               //signup button
-              CustomButton(
-                  text: TextConstants.authSignUpButton,
-                  textColor: ColorConstants.lightColor80,
-                  backgroundColor: ColorConstants.violetColor100,
-                  onPressed: onPressed),
+              Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16),
+                child: CustomButton(
+                    text: TextConstants.authSignUp,
+                    textColor: ColorConstants.lightColor80,
+                    backgroundColor: ColorConstants.violetColor100,
+                    onPressed: _signUpUser),
+              ),
               const SizedBox(
                 height: 16,
               ),
 
               //login button
-              CustomButton(
-                  text: TextConstants.authLoginButton,
-                  textColor: ColorConstants.violetColor100,
-                  backgroundColor: ColorConstants.violetColor50,
-                  onPressed: onPressed),
+              Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16),
+                child: CustomButton(
+                    text: TextConstants.authLogin,
+                    textColor: ColorConstants.violetColor100,
+                    backgroundColor: ColorConstants.violetColor50,
+                    onPressed: _loginUser),
+              ),
 
               const SizedBox(
                 height: 16,
@@ -99,5 +105,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
     );
   }
 
-  void onPressed() {}
+  void _signUpUser() {
+    Navigator.pushNamed(context, '/signup');
+  }
+
+  void _loginUser() {
+    Navigator.pushNamed(context, '/login');
+  }
 }

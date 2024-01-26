@@ -21,7 +21,7 @@ class OnboardingPageView extends StatelessWidget {
       children: <Widget>[
         // image
         Padding(
-          padding: const EdgeInsets.only(left: 31,top: 32, right: 32),
+          padding: const EdgeInsets.only(left: 31, top: 32, right: 32),
           child: Container(
             alignment: Alignment.center,
             height: 312,

@@ -15,10 +15,19 @@ class TextConstants {
       'Setup your budget for each category so you in control';
 
   // Auth Constants
-  static const String authTitle = 'Montra Login';
+  static const String authName = 'Name';
   static const String authEmailLabel = 'Email';
   static const String authPasswordLabel = 'Password';
-  static const String authLoginButton = 'Login';
+  static const String authLogin = 'Login';
   static const String authForgotPassword = 'Forgot Password?';
-  static const String authSignUpButton = 'Sign Up';
+  static const String authSignUp = 'Sign Up';
+  // signin text
+  static const String authtext1 = 'By signing up, you agree to the';
+  static const String authtext2 = ' Terms of Service and Privacy Policy';
+  static const String authtext3 = 'Or with';
+  static const String authtext4 = 'Sign Up with Google';
+  static const String authtext5 = 'Already have an account? ';
+  // login text
+  static const String authtext6 = 'Forgot Password?';
+  static const String authtext8 = 'Don\'t have an account yet? ';
 }
