@@ -3,6 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:montra/core/constants/color_constants.dart';
 import 'package:montra/core/constants/image_path_constants.dart';
 import 'package:montra/features/auth/controller/auth_controller.dart';
+import 'package:montra/features/auth/provider/auth_provider.dart';
+import 'package:provider/provider.dart';
 
 class CustomFormField extends StatelessWidget {
   final TextEditingController controller;
@@ -29,8 +31,9 @@ class CustomFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context);
     return TextFormField(
-      obscureText: obscureText,
+      obscureText: authProvider.isPasswordVisible ? false : obscureText,
       controller: controller,
       textInputAction: action,
       focusNode: currentFocus,
@@ -68,15 +71,20 @@ class CustomFormField extends StatelessWidget {
           ),
           suffixIcon: isPasswordField
               ? IconButton(
-                  icon: SvgPicture.asset(
-                    ImagePathConstants.eyeShow,
-                    fit: BoxFit.contain,
-                    height: 32,
-                    width: 32,
-                    colorFilter: const ColorFilter.mode(
-                        ColorConstants.lightColor20, BlendMode.srcIn),
-                  ),
-                  onPressed: () => debugPrint('Passwordvisibility icon'))
+                  icon: authProvider.isPasswordVisible == true
+                      ? SvgPicture.asset(ImagePathConstants.eyeOpen,
+                          fit: BoxFit.contain,
+                          height: 24,
+                          width: 24,
+                          colorFilter: const ColorFilter.mode(
+                              ColorConstants.lightColor20, BlendMode.srcATop))
+                      : SvgPicture.asset(ImagePathConstants.eyeClose,
+                          fit: BoxFit.contain,
+                          height: 24,
+                          width: 24,
+                          colorFilter: const ColorFilter.mode(
+                              ColorConstants.lightColor20, BlendMode.srcATop)),
+                  onPressed: authProvider.togglePasswordVisibility)
               : null),
       validator: validator,
     );

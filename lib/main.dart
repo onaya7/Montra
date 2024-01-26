@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:montra/app/routes.dart';
 import 'package:montra/app/themes.dart';
 import 'package:montra/core/constants/color_constants.dart';
+import 'package:montra/features/auth/provider/auth_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,11 +23,18 @@ class MyApp extends StatelessWidget {
           ColorConstants.lightColor100, // Set navigation bar color
       systemNavigationBarIconBrightness: Brightness.dark,
     ));
-    return MaterialApp(
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => AuthProvider()),
+
+      ],
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: AppThemes.lightTheme,
         darkTheme: AppThemes.darkTheme,
         onGenerateRoute: AppRoutes.onGenerateRoute,
-        initialRoute: '/onboarding');
+        initialRoute: '/onboarding',
+      ),
+    );
   }
 }

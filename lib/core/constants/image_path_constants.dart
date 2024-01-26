@@ -11,7 +11,8 @@ class ImagePathConstants {
   // Auth screen images
   static const String authBackground = 'assets/images/png/auth_background.png';
   static const String google = 'assets/images/svg/google.svg';
-  static const String eyeShow = 'assets/images/svg/eye_show.svg';
+  static const String eyeOpen = 'assets/images/svg/eye_open.svg';
+  static const String eyeClose = 'assets/images/svg/eye_close.svg';
 
   // Profile screen images
   static const String profilePicture = 'assets/images/png/profile_picture.png';
