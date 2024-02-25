@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:montra/app/screen_size.dart';
+import 'package:montra/app/app_screen_size.dart';
 import 'package:montra/core/constants/color_constants.dart';
 import 'package:montra/core/constants/text_constants.dart';
 

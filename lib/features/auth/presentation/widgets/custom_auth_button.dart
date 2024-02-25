@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:montra/app/screen_size.dart';
+import 'package:montra/app/app_screen_size.dart';
 import 'package:montra/core/constants/color_constants.dart';
 import 'package:montra/core/constants/image_path_constants.dart';
 import 'package:montra/core/constants/text_constants.dart';

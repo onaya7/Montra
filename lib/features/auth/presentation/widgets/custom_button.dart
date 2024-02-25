@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:montra/app/screen_size.dart';
+import 'package:montra/app/app_screen_size.dart';
 
 class CustomButton extends StatelessWidget {
   final String text;
