@@ -38,4 +38,10 @@ class TextConstants {
   static const String setting = 'Setting';
   static const String exportdata = 'Export Data';
   static const String logout = 'Logout';
+
+  // Bottomapp bar Constants
+  static const String home = 'Home';
+  static const String transaction = 'Transaction';
+  static const String budget = 'Budget';
+  static const String profile = 'Profile';
 }

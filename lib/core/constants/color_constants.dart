@@ -22,6 +22,7 @@ class ColorConstants {
   static const Color lightColor60 = Color.fromRGBO(241, 241, 250, 1);
   static const Color lightColor80 = Color.fromRGBO(252, 252, 252, 1);
   static const Color lightColor100 = Color.fromRGBO(255, 255, 255, 1);
+  static const Color iconColor = Color.fromRGBO(198, 198, 198, 1);
 
   //Dark Theme Colors
   static const Color darkColor25 = Color.fromRGBO(41, 43, 45, 1);

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:montra/app/screen_size.dart';
 import 'package:montra/core/constants/color_constants.dart';
-import 'package:montra/core/constants/image_path_constants.dart';
 import 'package:montra/core/constants/text_constants.dart';
-import 'package:montra/features/profile/presentation/widgets/profile_header.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({
+class BudgetPage extends StatelessWidget {
+  const BudgetPage({
     super.key,
   });
 
@@ -17,16 +15,15 @@ class ProfilePage extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20, top: 30, right: 20),
             width: ScreenSize.maxWidth(context),
             color: ColorConstants.lightColor80,
-            child: Column(
-              children: <Widget>[
-                ProfileHeader(
-                    name: TextConstants.name,
-                    imagePath: ImagePathConstants.profilePicture,
-                    onPressed: () {}),
-                const SizedBox(
-                  height: 40,
+            child: const Center(
+              child: Text(
+                TextConstants.budget,
+                style: TextStyle(
+                  color: ColorConstants.darkColor100,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
                 ),
-              ],
+              ),
             )));
   }
 }

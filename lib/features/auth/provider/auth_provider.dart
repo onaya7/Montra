@@ -10,12 +10,14 @@ class AuthProvider extends ChangeNotifier {
   bool _isChecked = false;
   bool _isLoading = false;
   bool _isPasswordVisible = false;
+  int _isSelected = 0;
 
   // getters
   bool get isLogin => _isLogin;
   bool get isChecked => _isChecked;
   bool get isLoading => _isLoading;
   bool get isPasswordVisible => _isPasswordVisible;
+  int get isSelected => _isSelected;
 
   void checkbox(bool? value) {
     _isChecked = !_isChecked;
@@ -23,12 +25,7 @@ class AuthProvider extends ChangeNotifier {
   }
 
   void login() {
-    _isLogin = true;
-    notifyListeners();
-  }
-
-  void logout() {
-    _isLogin = false;
+    _isLogin = !_isLogin;
     notifyListeners();
   }
 
@@ -36,8 +33,14 @@ class AuthProvider extends ChangeNotifier {
     _isLoading = true;
     notifyListeners();
   }
- void togglePasswordVisibility() {
+
+  void togglePasswordVisibility() {
     _isPasswordVisible = !_isPasswordVisible;
+    notifyListeners();
+  }
+
+  void select(int index) {
+    _isSelected = index;
     notifyListeners();
   }
 }

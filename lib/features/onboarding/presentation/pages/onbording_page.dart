@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:montra/app/screen_size.dart';
-import 'package:montra/features/auth/presentation/widgets/custom_button.dart';
 import 'package:montra/core/constants/color_constants.dart';
 import 'package:montra/core/constants/image_path_constants.dart';
 import 'package:montra/core/constants/text_constants.dart';
+import 'package:montra/features/auth/presentation/widgets/custom_button.dart';
 import 'package:montra/features/onboarding/presentation/widgets/onboarding_pageview.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
