@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:montra/core/constants/color_constants.dart';
-import 'package:montra/core/constants/image_path_constants.dart';
+import 'package:montra/utils/constants/color_constants.dart';
+import 'package:montra/utils/constants/image_path_constants.dart';
 import 'package:montra/features/auth/provider/auth_provider.dart';
 import 'package:montra/features/budget/presentation/pages/budget_page.dart';
 import 'package:montra/features/home/presentation/pages/home_page.dart';

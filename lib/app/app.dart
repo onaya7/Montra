@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:montra/app/app_routes.dart';
-import 'package:montra/app/app_themes.dart';
-import 'package:montra/core/constants/color_constants.dart';
+import 'package:montra/core/device/routes/app_routes.dart';
+import 'package:montra/core/device/themes/app_themes.dart';
+import 'package:montra/utils/constants/color_constants.dart';
 import 'package:montra/features/auth/provider/auth_provider.dart';
 import 'package:montra/features/builder/provider/builder_provider.dart';
 import 'package:provider/provider.dart';
-
-void main() {
-  runApp(const MyApp());
-}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:montra/app/app_screen_size.dart';
-import 'package:montra/core/constants/color_constants.dart';
-import 'package:montra/core/constants/image_path_constants.dart';
-import 'package:montra/core/constants/text_constants.dart';
+import 'package:montra/core/device/sizes/app_screen_size.dart';
+import 'package:montra/utils/constants/color_constants.dart';
+import 'package:montra/utils/constants/image_path_constants.dart';
+import 'package:montra/utils/constants/text_constants.dart';
 
 class CustomAuthButton extends StatelessWidget {
   final void Function()? onPressed;

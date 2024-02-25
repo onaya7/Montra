@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:montra/core/constants/color_constants.dart';
-import 'package:montra/core/constants/image_path_constants.dart';
-import 'package:montra/core/constants/text_constants.dart';
-import 'package:montra/core/utils/validations.dart';
+import 'package:montra/utils/constants/color_constants.dart';
+import 'package:montra/utils/constants/image_path_constants.dart';
+import 'package:montra/utils/constants/text_constants.dart';
+import 'package:montra/utils/validators/validations.dart';
 import 'package:montra/features/auth/presentation/widgets/custom_account.dart';
 import 'package:montra/features/auth/presentation/widgets/custom_auth_button.dart';
 import 'package:montra/features/auth/presentation/widgets/custom_button.dart';

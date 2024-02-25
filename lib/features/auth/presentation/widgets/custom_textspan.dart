@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:montra/core/constants/color_constants.dart';
+import 'package:montra/utils/constants/color_constants.dart';
 
 class CustomTextSpan extends StatelessWidget {
   final String text1;
